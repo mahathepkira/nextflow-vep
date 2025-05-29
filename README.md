@@ -40,10 +40,10 @@ nextflow run main.nf -profile gb --input data --vcf_compare <path>/{compare}.vcf
 nextflow run main.nf -profile gb --input data --vcf_compare <path>/{compare}.vcf.gz --outdir results -resume
 ```
 ### Options
-- `--build` = build genome มีผลกับชื่อ output (จำเป็น:ค่าเริ่มต้น: “GRCh38”)
+- `--build` = build genome มีผลกับชื่อ output (จำเป็น:ค่าเริ่มต้น:“GRCh38”)
 - `--input` = โฟลเดอร์ input (จำเป็น:ค่าเริ่มต้น:data)
 - `--outdir` = โฟล์เดอร์ output (จำเป็น:ค่าเริ่มต้น:output)
-- `--vep_config` = โฟลเดอร์ที่เก็บไฟล์ VEP_GRCh38.ini (จำเป็น:ค่าเริ่มต้น:bin/VEP_GRCh38.ini)
+- `--vep_config` = เส้นทาง VEP_GRCh38.ini (จำเป็น:ค่าเริ่มต้น:bin/VEP_GRCh38.ini)
 - `--vcf_compare` = เส้นทางไฟล์ VCF ในการเปรียบเทียบในขั้นตอน VCF (ไม่จำเป็น)
 - `-profile`  = เลือกไฟล์ config ในการรัน Nextflow
 
