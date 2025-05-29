@@ -17,7 +17,7 @@ nextflow-vep เป็น bioinformatics pipline ที่พัฒนาขึ�
 3. การดึงข้อมูล Variant Annotations จากข้อมูล Variant ที่มีอยู่ (Call_ANN)
 4. การรวมไฟล์ (Combine_VCF)
    
-![ภาพ nextflow](vep.drawio.png)
+![ภาพ nextflow](nextflow-vep.drawio.png)
 
 ## 2. การใช้งาน nextflow-vep
 ### การใช้งานแบบไม่ใช้ขั้นตอน Comapare_VCF 
