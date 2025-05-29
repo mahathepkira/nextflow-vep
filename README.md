@@ -269,10 +269,10 @@ output
      ├── {samples}_summary.html       
      └── {samples}_warnings.txt
 ```
-### ตัวอยาอย่างการเเจ้งเตือน
+### ตัวอย่างผลลัพธ์จาก {samples}_vep113.GRCh38.vcf.gz 
+### ตัวอย่างผลลัพธ์จาก {samples}_summary.html  
+### ตัวอยาอย่างการเเจ้งเตือนจาก {samples}_warnings.txt
 ```bash
-#{samples}_warnings.txt
-
 WARNING: 33515 : WARNING: Transcript-assembly mismatch in rs6650119
 WARNING: Transcript-assembly mismatch in rs6650119
 WARNING: 48514 : WARNING: Transcript-assembly mismatch in rs309472
