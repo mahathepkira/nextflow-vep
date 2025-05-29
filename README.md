@@ -299,6 +299,8 @@ C|NP_001269157.1:p.Tyr411%3D|1360|1233|411|Y|taT/taC|rs7289170&COSV52831455||-1|
 ```
 ### ตัวอย่างผลลัพธ์จาก {samples}_summary.html
 ![ภาพ stat](stat.png)
+![ภาพ dataversion](dataversion.png)
+![ภาพ stat1](stat1.png)
 ### ตัวอยาอย่างการเเจ้งเตือนจาก {samples}_warnings.txt
 ```bash
 WARNING: 33515 : WARNING: Transcript-assembly mismatch in rs6650119
