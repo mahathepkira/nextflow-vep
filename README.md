@@ -271,6 +271,8 @@ output
 ```
 ### ตัวอยาอย่างการเเจ้งเตือน
 ```bash
+#{samples}_warnings.txt
+
 WARNING: 33515 : WARNING: Transcript-assembly mismatch in rs6650119
 WARNING: Transcript-assembly mismatch in rs6650119
 WARNING: 48514 : WARNING: Transcript-assembly mismatch in rs309472
