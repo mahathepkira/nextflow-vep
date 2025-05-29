@@ -5,7 +5,7 @@
 2. [การใช้งาน nextflow-vep](#2-การใช้งาน-nextflow-vep)
 3. [การเตรียมเครื่องมือและข้อมูลสำหรับ nextflow-vep](#3-การเตรียมเครื่องมือและข้อมูลสำหรับ-nextflow-vep)
 4. [รายละเอียดขั้นตอนใน nextflow-vep](#4-รายละเอียดขั้นตอนใน-nextflow-vep)
-5. [การปรับแต่งการ Annotations ใน VEP](#5การปรับแต่งการ-Annotations-ใน-VEP)
+5. [การปรับแต่งการ Annotations ใน VEP](#5-การปรับแต่งการ-Annotations-ใน-VEP)
 6. [Output](#6-Output)
 
 ---
@@ -103,8 +103,9 @@ singularity {
 ```
 
 ### การเตรียมโฟลเดอร์สำหรับ VEP
-ผู้ใช้งานจำเป็นที่จะต้องเตรียมโฟลเดอร์สำหรับการรันโปรแกรม VEP ไว้ในโฟลเดอร์ vep_bundle หรือจะกำหนดเส้นทางของโฟลเดอร์นี้ลงในตัวแปล runOptions = `--bind <path>` โดยในโฟลเดอร์นี้จะต้องประกอบไปด้วยไฟล์จริงของข้อมูลที่จะใช้เช่น เส้นทางโปรแกรม VEP, ไฟล์ FASTA, ไฟล์ Plugin เป็นต้น โดยรายละเอียดการเตรียมโฟลเดอร์ [สามารถศึกษาเพิ่มเติมได้ที่ VEP](
-https://useast.ensembl.org/info/docs/tools/vep/script/index.html)
+ผู้ใช้งานจำเป็นที่จะต้องเตรียมโฟลเดอร์สำหรับการรันโปรแกรม VEP ไว้ในโฟลเดอร์ vep_bundle หรือจะกำหนดเส้นทางของโฟลเดอร์นี้ลงในตัวแปล runOptions = `--bind <path>` โดยในโฟลเดอร์นี้จะต้องประกอบไปด้วยไฟล์จริงของข้อมูลที่จะใช้เช่น เส้นทางโปรแกรม VEP, ไฟล์ FASTA, ไฟล์ Plugin เป็นต้น โดยรายละเอียดการเตรียมโฟลเดอร์ 
+[สามารถศึกษาเพิ่มเติมได้ที่ VEP](https://asia.ensembl.org/info/docs/tools/vep/index.html
+)
 ```bash
 vep_bundle
 ├── dbNSFP4.9
@@ -250,7 +251,7 @@ plugin dbNSFP,/nbt_main/home/lattapol/nextflow-vep2/vep_bundle/dbNSFP4.9/dbNSFP4
 
 
 
-โดยรายการปรับแต่งในกรณีที่จะทำการเปิดงานใช้ option นั้นในให้ใส่ 1 เช่น `offline 1` (หากเป็นการใช้งานปกติจะเป็น `--offline`) ในกรณีที่จะใส่รายละเอียดใน option เช่น “species homo_sepiens”สามรถใช้งานได้เหมือนปกติ โดยผู้ใช้งานสามารถศึกษา options ในการทำงานเพื่อให้เหมาะสมกับข้อมูลที่ใช้ในการ Annotations [เพิ่มเติมได้ที่ VEP](https://useast.ensembl.org/info/docs/tools/vep/script/index.html)
+โดยรายการปรับแต่งในกรณีที่จะทำการเปิดงานใช้ option นั้นในให้ใส่ 1 เช่น `offline 1` (หากเป็นการใช้งานปกติจะเป็น `--offline`) ในกรณีที่จะใส่รายละเอียดใน option เช่น “species homo_sepiens”สามรถใช้งานได้เหมือนปกติ โดยผู้ใช้งานสามารถศึกษา options ในการทำงานเพื่อให้เหมาะสมกับข้อมูลที่ใช้ในการ Annotations [เพิ่มเติมได้ที่ VEP](https://asia.ensembl.org/info/docs/tools/vep/index.html)
 
 ## 6. Output
 โดยผลลัพธ์การ Annotations จะอยู่ในรูปแบบของไฟล์ {samples}.vep113. GRCh38.vcf.gz ซึ่งข้อมูลที่ได้มาจากการ Annotations จะอยู่ภายใต้ fields ที่ชื่อ CSQ และข้อมูลจะถูกแบ่งด้วย | ตามรูปที่ 10 และ VEP ยังมีการสรุปข้อมูลการ Annotations ในไฟล์ {samples}_summary.html นอกจากนี้ยังมีไฟล์ {samples}_warnings.txt ในกรณีที่มีการแจ้งเตือนจาก VEP
