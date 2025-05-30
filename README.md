@@ -306,7 +306,7 @@ C|NP_001269157.1:p.Tyr411%3D|1360|1233|411|Y|taT/taC|rs7289170&COSV52831455||-1|
 ![ภาพ type1](type2.png)
 ![ภาพ sift](sift.png)
 ![ภาพ VandP](VandP.png)
-### ตัวอยาอย่างการเเจ้งเตือนจาก {samples}_warnings.txt
+### ตัวอย่างการเเจ้งเตือนจาก {samples}_warnings.txt
 ```bash
 WARNING: 33515 : WARNING: Transcript-assembly mismatch in rs6650119
 WARNING: Transcript-assembly mismatch in rs6650119
