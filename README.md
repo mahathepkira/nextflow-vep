@@ -150,7 +150,7 @@ process ANN_VEP {
 ```
 
 ### การทำเปรียบเทียบข้อมูล Variant ที่ซ้ำกับข้อมูล Variant ที่มีอยู่ (Comapare_VCF)
-สำหรับเครื่องมือชีวสารสนเทศที่ใช้ในขั้นตอนการทำ Compare_VCF ได้แก่ BCFTools (version 1.17) โดยใช้ bcftools isec ในการดึงข้อมูล Variants ที่ซ้ำกับ `--vcf_compare` ไว้ในไฟล์ {samples}_overlap.vcf.gz และดึงข้อมูล Variants ที่ไม่ซ้ำ `--vcf_compare` ไว้ในไฟล์ {samples}_unique.vcf.gz โดยเกณฑ์ในการดึงข้อมูลที่ซ้ำกันคือจะต้องมีตำแหน่งที่ตรงกันและมี ALT กับ REF ที่เหมือนกัน
+สำหรับเครื่องมือชีวสารสนเทศที่ใช้ในขั้นตอนการทำ Compare_VCF ได้แก่ BCFTools (version 1.17) โดยใช้ `bcftools isec` ในการดึงข้อมูล Variants ที่ซ้ำกับ `--vcf_compare` ไว้ในไฟล์ {samples}_overlap.vcf.gz และดึงข้อมูล Variants ที่ไม่ซ้ำ `--vcf_compare` ไว้ในไฟล์ {samples}_unique.vcf.gz โดยเกณฑ์ในการดึงข้อมูลที่ซ้ำกันคือจะต้องมีตำแหน่งที่ตรงกันและมี ALT กับ REF ที่เหมือนกัน
 ```bash
 process Compare_vcf {
 
@@ -176,7 +176,7 @@ process Compare_vcf {
 }
 ```
 ### การดึงข้อมูล Variant Annotations จากข้อมูล Variant ที่มีอยู่ (Call_ANN)
-สำหรับเครื่องมือชีวสารสนเทศที่ใช้ในขั้นตอนการทำ Call_ANN ได้แก่ BCFTools (version 1.17) โดยใช้ bcftools annotate ในการดึงข้อมูล Annotations ของ variants ใน `--vcf_compare` ที่ซ้ำกับข้อมูลใน {samples}_overlap.vcf.gz จากในขั้นตอน Compare_VCF มาใส่ให้ {samples}_shared.vcf.gz โดยจะทำการเลือก tag `CSQ` ในคอลัมน์ INFO ที่จะมีการบันทึกข้อมูล Annotations มาใส่ให้กับ variants ที่ซ้ำกับ `--vcf_compare` แต่ยังไม่มีข้อมูล Annotations
+สำหรับเครื่องมือชีวสารสนเทศที่ใช้ในขั้นตอนการทำ Call_ANN ได้แก่ BCFTools (version 1.17) โดยใช้ `bcftools annotate` ในการดึงข้อมูล Annotations ของ variants ใน `--vcf_compare` ที่ซ้ำกับข้อมูลใน {samples}_overlap.vcf.gz จากในขั้นตอน Compare_VCF มาใส่ให้ {samples}_shared.vcf.gz โดยจะทำการเลือก tag `CSQ` ในคอลัมน์ INFO ที่จะมีการบันทึกข้อมูล Annotations มาใส่ให้กับ variants ที่ซ้ำกับ `--vcf_compare` แต่ยังไม่มีข้อมูล Annotations
 ```bash
 process Call_ANN {
 
@@ -200,7 +200,7 @@ process Call_ANN {
 }
 ```
 ### การรวมไฟล์ (Combine_VCF)
-สำหรับเครื่องมือชีวสารสนเทศที่ใช้ในขั้นตอนการทำ Combine_VCF ได้แก่ BCFTools (version 1.17) ทำการรวมไฟล์โดยใช้คำสั่ง bcftools concat ในการรวมข้อมูลจากที่ทำการดึงข้อมูล Annotaions ในขั้นตอน Call_ANN และไฟล์ที่ทำการ Varinats Annotations ในขั้นตอน ANN_VEP ให้เป็นไฟล์เดียวกัน
+สำหรับเครื่องมือชีวสารสนเทศที่ใช้ในขั้นตอนการทำ Combine_VCF ได้แก่ BCFTools (version 1.17) ทำการรวมไฟล์โดยใช้คำสั่ง `bcftools concat` ในการรวมข้อมูลจากที่ทำการดึงข้อมูล Annotaions ในขั้นตอน Call_ANN และไฟล์ที่ทำการ Varinats Annotations ในขั้นตอน ANN_VEP ให้เป็นไฟล์เดียวกัน
 ```bash
 process Combine_VCF {
 
