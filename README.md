@@ -150,7 +150,7 @@ process ANN_VEP {
 ```
 
 ### การทำเปรียบเทียบข้อมูล Variant ที่ซ้ำกับข้อมูล Variant ที่มีอยู่ (Comapare_VCF)
-สำหรับเครื่องมือชีวสารสนเทศที่ใช้ในขั้นตอนการทำ Compare_VCF ได้แก่ BCFTools (version 1.17) โดยใช้ bcftools isec ในการดึงข้อมูล Variants ที่ซ้ำกับ `--vcf_compare` ไว้ในไฟล์ overlap.vcf.gz และดึงข้อมูล Variants ที่ไม่ซ้ำ `--vcf_compare` ไว้ในไฟล์ unique.vcf.gz โดยเกณฑ์ในการดึงข้อมูลที่ซ้ำกันคือจะต้องมีตำแหน่งที่ตรงกันและมี ALT กับ REF ที่เหมือนกัน
+สำหรับเครื่องมือชีวสารสนเทศที่ใช้ในขั้นตอนการทำ Compare_VCF ได้แก่ BCFTools (version 1.17) โดยใช้ bcftools isec ในการดึงข้อมูล Variants ที่ซ้ำกับ `--vcf_compare` ไว้ในไฟล์ {samples}_overlap.vcf.gz และดึงข้อมูล Variants ที่ไม่ซ้ำ `--vcf_compare` ไว้ในไฟล์ {samples}_unique.vcf.gz โดยเกณฑ์ในการดึงข้อมูลที่ซ้ำกันคือจะต้องมีตำแหน่งที่ตรงกันและมี ALT กับ REF ที่เหมือนกัน
 ```bash
 process Compare_vcf {
 
