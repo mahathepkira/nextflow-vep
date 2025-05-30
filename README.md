@@ -144,7 +144,7 @@ process ANN_VEP {
 
   """
   vep -i ${vcfgz} -o ${prefix}_vep113.${params.build}.vcf --config ${config}
-  bgzip ${prefix}.vep113.${params.build}.vcf
+  bgzip ${prefix}_vep113.${params.build}.vcf
   """
 }
 ```
