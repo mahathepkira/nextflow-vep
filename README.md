@@ -28,7 +28,7 @@ nextflow run main.nf -profile gb --input data --outdir results
 ```
 
 ### การใช้งานแบบใช้ขั้นตอน Compare_VCF 
-ผู้ใช้งานสามารถใช้ option –-vcf_compare ในการระบุเส้นทางของไฟล์ VCF ที่จะใช้ในการเปรียบเทียบ โดย workflow การทำงานจะเป็นไปตามเส้นเขียว
+ผู้ใช้งานสามารถใช้ option `--vcf_compare` ในการระบุเส้นทางของไฟล์ VCF ที่จะใช้ในการเปรียบเทียบ โดย workflow การทำงานจะเป็นไปตามเส้นเขียว
 
 ```bash
 nextflow run main.nf -profile gb --input data --vcf_compare <path>/{compare}.vcf.gz --outdir results
