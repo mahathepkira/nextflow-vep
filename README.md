@@ -13,15 +13,15 @@
 ## 1. บทนำ
 nextflow-vep เป็น bioinformatics pipline ที่พัฒนาขึ้นสำหรับการทำ Variant Annotations โดยจะมีขั้นตอนดังต่อไปนี้ 
 1. การทำ Variant Annotations
-2. การทำเปรียบเทียบข้อมูล Variant ที่ซ้ำกับข้อมูล Variant ที่มีอยู่ (Comapare_VCF) 
-3. การดึงข้อมูล Variant Annotations จากข้อมูล Variant ที่มีอยู่ (Call_ANN)
+2. การเปรียบเทียบข้อมูล Variant ที่ซ้ำกับข้อมูล Variant ที่มีอยู่ (Comapare_VCF) 
+3. การดึงข้อมูล Variant Annotations ที่ซ้ำกับข้อมูล Variant ที่มีอยู่ (Call_ANN)
 4. การรวมไฟล์ (Combine_VCF)
    
 ![ภาพ nextflow](nextflow-vep.drawio.png)
 
 ## 2. การใช้งาน nextflow-vep
 ### การใช้งานแบบไม่ใช้ขั้นตอน Comapare_VCF 
-ผู้ใช้งานสามารถใช้คำสั่งต่อไปนี้ในการสั่งใช้งาน โดยข้อมูลที่อยู่ใน data จะต้องอยู่ในรูป vcf.gz โดย workflow การทำงานจะเป็นไปตามเส้นแดง
+ผู้ใช้งานสามารถใช้คำสั่งต่อไปนี้ในการสั่งใช้งาน nextflow-vep โดยข้อมูลที่อยู่ใน data จะต้องอยู่ในรูป vcf.gz โดย workflow [การทำงานจะเป็นไปตามเส้นแดง](#nextflow-vep.drawio-image)
 
 ```bash
 nextflow run main.nf -profile gb --input data --outdir results
