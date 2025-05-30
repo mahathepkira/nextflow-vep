@@ -253,7 +253,7 @@ plugin dbNSFP,/nbt_main/home/lattapol/nextflow-vep2/vep_bundle/dbNSFP4.9/dbNSFP4
 โดยการปรับแต่งในกรณีที่จะทำการเปิดงานใช้ option นั้นในให้ใส่ 1 เช่น `offline 1` (หากเป็นการใช้งาน command ปกติจะเป็น `--offline`) ในกรณีที่จะใส่รายละเอียดใน option เช่น `species homo_sepiens` สามารถใช้งานได้เหมือนปกติ โดยผู้ใช้งานสามารถศึกษา options ในการทำงานเพื่อให้เหมาะสมกับข้อมูลที่ใช้ในการ Annotations [เพิ่มเติมได้ที่ VEP](https://asia.ensembl.org/info/docs/tools/vep/script/index.html)
 
 ## 6. Output
-โดยผลลัพธ์การ Annotations จะอยู่ในไฟล์ {samples}_vep113. GRCh38.vcf.gz ซึ่งข้อมูลที่ได้มาจากการ Annotations จะอยู่ภายใต้ fields ที่ชื่อว่า CSQ โดยข้อมูลการ Annotations จะถูกแบ่งด้วย  `| ` และ มีการสรุปข้อมูลสถิติในการ Annotations ในไฟล์ {samples}_summary.html นอกจากนี้ยังมีไฟล์ {samples}_warnings.txt ในกรณีที่มีการแจ้งเตือนจาก VEP
+โดยผลลัพธ์การ Annotations จะอยู่ในไฟล์ {samples}_vep113. GRCh38.vcf.gz ซึ่งข้อมูลที่ได้มาจากการ Annotations จะอยู่ภายใต้ fields ที่ชื่อว่า CSQ โดยข้อมูลการ Annotations จะถูกแบ่งด้วย  `|` และ มีการสรุปข้อมูลสถิติในการ Annotations ในไฟล์ {samples}_summary.html นอกจากนี้ยังมีไฟล์ {samples}_warnings.txt ในกรณีที่มีการแจ้งเตือนจาก VEP
 ### ภาพรวม Output
 ```bash
 output
