@@ -200,7 +200,7 @@ process Call_ANN {
 }
 ```
 ### การรวมไฟล์ (Combine_VCF)
-สำหรับเครื่องมือชีวสารสนเทศที่ใช้ในขั้นตอนการทำ Combine_VCF ได้แก่ BCFTools (version 1.17) ทำการรวมไฟล์โดยใช้คำสั่ง bcftools concat ในการรวมข้อมูลจากที่ทำการดึงข้อมูล Annotaions Call_ANN และไฟล์ที่ทำการ Varinats Annotations ในขั้นตอน ANN_VEP ให้เป็นไฟล์เดียวกัน
+สำหรับเครื่องมือชีวสารสนเทศที่ใช้ในขั้นตอนการทำ Combine_VCF ได้แก่ BCFTools (version 1.17) ทำการรวมไฟล์โดยใช้คำสั่ง bcftools concat ในการรวมข้อมูลจากที่ทำการดึงข้อมูล Annotaions ในขั้นตอน Call_ANN และไฟล์ที่ทำการ Varinats Annotations ในขั้นตอน ANN_VEP ให้เป็นไฟล์เดียวกัน
 ```bash
 process Combine_VCF {
 
